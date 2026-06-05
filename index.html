@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriVision AI — калькулятор калорий по фото</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      <img src="assets/logo.svg" alt="NutriVision AI">
+    </a>
+    <nav class="menu">
+      <a class="active" href="index.html">Калькулятор</a>
+      <a href="features.html">Как работает</a>
+      <a href="creator.html">О создателе</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Интеллектуальный калькулятор калорий по фото</span>
+        <h1>Загрузи фото блюда и получи расчёт калорий</h1>
+        <p class="lead">
+          NutriVision AI — сервис для оценки калорийности еды или напитка по фотографии.
+          Открой сайт на телефоне, наведи камеру на блюдо и получи расчёт ккал, белков, жиров и углеводов.
+        </p>
+        <div class="actions">
+          <a class="btn green" href="#calculator">Попробовать калькулятор</a>
+          <a class="btn secondary" href="features.html">Как работает анализ</a>
+        </div>
+      </div>
+<div class="phone-card">
+        <div class="phone-inner">
+          <div class="screen-top"></div>
+          <div class="food-demo logo-demo" id="heroPreview"><img src="assets/logo.svg" alt="NutriVision AI"></div>
+          <div class="mini-result" id="heroResult">Пример: 520 ккал</div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="calculator" class="section">
+    <div class="container calculator">
+
+      <div class="card upload-zone">
+        <h2>Загрузка фото</h2>
+        <p>С телефона кнопка откроет камеру. С компьютера можно выбрать фотографию из папки.</p>
+
+        <label class="file-label" for="photoInput">📷 Сфотографировать или загрузить фото</label>
+        <input id="photoInput" type="file" accept="image/*" capture="environment">
+
+        <div id="preview" class="preview">
+          <p>Здесь появится фото еды или напитка</p>
+        </div>
+
+        <div class="actions">
+          <button id="analyzeBtn" class="green">Рассчитать калории по фото</button>
+          <button id="clearBtn" class="secondary" type="button">Очистить фото</button>
+        </div>
+      </div>
+
+      <aside id="result" class="result-box">
+        <h3>Результат анализа</h3>
+        <p>После загрузки фото здесь появится оценка калорийности.</p>
+        <div class="kcal" id="kcalVal">0 ккал</div>
+        <div class="result-list">
+          <div><span>Белки</span><b id="prot">0 г</b></div>
+          <div><span>Жиры</span><b id="fat">0 г</b></div>
+          <div><span>Углеводы</span><b id="carb">0 г</b></div>
+        </div>
+        <p class="notice">* Расчёт является приблизительным и зависит от качества фотографии.</p>
+      </aside>
+    </div>
+  </section>
+<section class="section">
+    <div class="container">
+      <div class="card history-card">
+        <div class="history-head">
+          <div>
+            <h2>История запросов</h2>
+            <p>Здесь сохраняются последние загруженные фото и результаты расчёта. История хранится в браузере.</p>
+          </div>
+          <button id="clearHistoryBtn" class="secondary" type="button">Очистить историю</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <p class="empty-history">История пока пустая.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="section">
+    <div class="container grid-3">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Фото с телефона</h3>
+        <p>Открой сайт, нажми кнопку и сфотографируй еду или напиток прямо через браузер смартфона.</p>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>ИИ смотрит изображение</h3>
+        <p>Фото анализируется системой, которая определяет блюдо и примерную порцию.</p>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Расчёт ккал</h3>
+        <p>На экране появляется примерная калорийность, БЖУ и пояснение о точности расчёта.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer"></footer>
+
+<script src="footer.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
